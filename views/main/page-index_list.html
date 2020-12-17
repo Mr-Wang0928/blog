@@ -1,0 +1,28 @@
+<div class="section-article">
+	<div id="article-box">
+		{% for article in articles %}
+			<div class="article-list">
+				<a href="/detail/{{ article._id.toString() }}">
+					<span class="article-title"><h3>{{ article.title }}</h3></span>
+				</a>
+				
+				<p class="article-intro">
+					{{ article.intro }}
+				</p>
+				<ul class="article-infor">
+					<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+					<span class="intro-text">{{ article.user.username }}</span>
+					<span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
+					<span class="intro-text">{{ article.category.name }}</span>
+					<span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+					<span class="intro-text">{{ article.createdTime }}</span>
+					<span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+					<span class="intro-text">{{ article.click }}</span>
+				</ul>
+			</div>
+		{% endfor %}
+	</div>
+	<nav aria-label="Page navigation" id="pagination" data-id="{{ currentCateforyId }}">
+		{% include "./pagination.html" %}
+	</nav>  
+</div>

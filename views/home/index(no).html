@@ -1,0 +1,34 @@
+{% extends './layout.html' %}
+{% block title %}
+  博客管理系统
+{% endblock %}
+{% block message %}
+  用户列表
+{% endblock %}
+{% block content %}
+<div class="mainbox">    		   		
+    <div class="table">    			
+        <table border="0" cellspacing="0" id="test">					
+            <tr>					  
+            	<th>ID</th>					  
+                <th>UserName</th>					  
+                <th>IsAdmin</th>					  			
+            </tr>          
+                {% for user in users %}
+                	<tr>                      
+	                    <td class="mf">{{ user._id.toString() }}</td>                                  
+	                    <td class="mf">{{ user.username }}</td> 
+	                    {% if user.isAdmin %}
+							<td class="mf">是</td> 
+	                    {% else %}    
+	                    	<td class="mf">否</td>  
+	                    {% endif %}                          
+                	</tr>
+                {% endfor %}
+        </table>  
+		
+		{% include "./page-layout.html" %}
+		
+    </div>    	
+</div>				
+{% endblock %}

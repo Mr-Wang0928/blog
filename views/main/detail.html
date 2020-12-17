@@ -1,0 +1,72 @@
+{% extends './layout.html' %}
+{% block title %}博客内容{%  endblock %}
+{% block main %}
+	<!-- 文章详情区域 -->
+	<div class="section-article" id="detail-article">
+		<div class="article-list">
+			<div class="article-head">
+				<span class="article-title">
+				<h3>{{ article.title }}</h3>
+				</span>
+				<ul class="article-infor">
+					<span class="intro-text">{{ article.user.username }}</span>
+					<span class="intro-text">{{ article.category.name }}</span>
+					<span class="intro-text">{{ article.createdTime }}</span>
+					<span class="intro-text">{{ article.click }} 已阅读</span>
+				</ul>
+			</div>
+			<div id="article-intro">
+				<span class="article-intro">
+					<h4>简介：{{ article.intro }}</h4>
+				</span>
+			</div>
+		</div>
+
+		<div id="article-content">
+			<p class="article-content">
+				<h4>{{ article.content | safe}}</h4>
+			</p>
+		</div>
+	</div>
+	<!-- 添加评论输入框区域 -->
+	{% if userInfo._id %}
+	<div class="comment" style="width: 100%">
+	    <div class="input-group input-group-lg" >
+	      <input type="text" class="form-control" id="val" placeholder="快来发言吧">
+	      <span class="input-group-btn">
+	        <button class="btn btn-default btn-primary" id="submit" type="button" data-id="{{ article._id.toString() }}">评 论</button>
+	      </span>
+	    </div>
+	    <div class="foot-lnk err-container" >
+			<label for="tab-1" class="err"></label>
+		</div>
+	</div>
+	{% else %}
+	<div class="comment" style="width: 100%">
+	    <div class="input-group input-group-lg" >
+	      <input type="text" class="form-control" id="val" placeholder="登陆后可发表评论">
+	      <span class="input-group-btn">
+	        <button class="btn btn-default btn-primary" id="noLogin" type="button" data-id="{{ article._id.toString() }}">评 论</button>
+	      </span>
+	    </div>
+	    <div class="foot-lnk err-container" style="display: none;">
+			<label for="tab-1" class="err">请先登陆后再发表评论！</label>
+		</div>
+	</div>
+	{% endif %}
+	<!-- 评论区域 -->
+	<div id="comment-content">
+		{% for comment in comments %}
+		<div class="panel panel-default">
+		  <div class="panel-heading">{{ comment.user.username }} 发表于 : {{ comment.createdTime }}</div>
+		  <div class="panel-body">
+		    {{ comment.content }}
+		  </div>
+		</div>
+		{% endfor%}
+	</div>
+	<!-- 分页区域 -->
+	<nav aria-label="Page navigation" id="comment-pagination" data-id="{{ currentCateforyId }}">
+		{% include "./pagination.html" %}
+	</nav>  
+{%  endblock %}

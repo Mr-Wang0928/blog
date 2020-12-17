@@ -1,0 +1,23 @@
+{% extends './layout.html' %}
+{% block title %}
+  博客管理-分类列表
+{% endblock %}
+{% block message %}
+  <p style="font-size: 40px">err</p>
+{% endblock %}
+{% block content %}
+  {% if message.constructor == Object %}   <!-- 判断meggage是不是对象 -->
+    <div class="alert alert-danger" style="float: left;width: 100%;padding-left: 5%" role="alert">{{ message.name }}</br>{{ message.order }}</div>
+  {% else %}
+    <div class="alert alert-danger" style="float: left;width: 100%;padding-left: 5%" role="alert">{{ message }}</div>
+  {% endif %}
+
+<div style="width: 200px;margin:20px auto"">
+  {% if url %}
+  <a href="/{{ url }}" class="btn btn-primary btn-lg" style="width: 200px;border-radius: 5px;float: left;">返 回</a>
+  {% else %}
+  <a href="javascript:window.history.back()" class="btn btn-primary btn-lg" id="back" style="width: 200px;border-radius: 5px;float: left;">返 回</a>
+  {% endif %}
+</div>
+
+{% endblock %}

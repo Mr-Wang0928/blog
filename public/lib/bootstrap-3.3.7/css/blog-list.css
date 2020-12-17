@@ -1,0 +1,61 @@
+*{padding: 0px; margin: 0px;border:0px;}   		
+        ul, ol { list-style: none; }    		
+        /*.tm-footer{background: rgb(236, 144, 19);}*/
+    	.mainbox{width: 100%;margin: 0 auto;background: #fff;margin-top: -12px;padding-bottom: 20px;}    		
+        .mainbox .chose{margin: 12px auto;width: 1200px;padding-top: 20px;}    		
+        .mainbox .chose .box{width: 100%;display: flex;align-items: center;margin-bottom: 15px;}    		
+        .mainbox .chose .box span{width: 10%;color: #676767;font-size: 16px;}    		
+        .mainbox .chose .box ul{display: flex;flex-wrap: wrap;width: 90%;margin: 0;}    		
+        .mainbox .chose .box ul li{color: #161616;font-size: 14px;cursor: pointer;border: 1px solid #afafaf;padding: 7px 14px;border: 1px solid #afafaf;border-right: none;}    		
+        .mainbox .chose .box ul li:nth-of-type(1){margin-right: 10px;border-radius: 4px;border-right: 1px solid #afafaf;}    		
+        .mainbox .chose .box ul li:nth-of-type(2){border-radius: 4px 0 0 4px;}    		
+        .mainbox .chose .box ul li:nth-last-of-type(1){border-radius: 0 4px 4px 0;border-right: 1px solid #afafaf;}    		
+        .mainbox .chose .box ul li:hover{background: #e0f7ed;}    		    		
+        .mainbox .chose .box ul li.act{color: #11a560;border-color: #11a560;border-right: none;background-color: #e0f7ed;font-weight: 700;}    		
+        .mainbox .chose .box ul li:nth-of-type(1).act{border-right: 1px solid #11a560;}    		
+        .mainbox .chose .box ul li:nth-last-of-type(1).act{border-right: 1px solid #11a560;}    		
+        .mainbox .chose .box ul li.act2{border-left: 1px solid #11a560;}    		
+        .mainbox .chose .box ul li:nth-of-type(2).act2{border-left: 1px solid #afafaf;}    		    		
+        .mainbox .chose .box .fanwei{display: flex;height: 100%;width: 21%;line-height: 36px;font-size: 22px;}    		
+        .mainbox .chose .box .fanwei div{display: flex;width: 50%;}    		
+        .mainbox .chose .box .fanwei input{font-size: 14px;width: 90%;height: 36px;line-height: 36px;border-radius: 4px 0 0 4px;border: 1px solid #afafaf;color: #161616;padding: 0 12px;outline: none;transition: border .2s ease-in;}
+    	.mainbox .chose .box .fanwei span{width: 34%;text-align: center;border: 1px solid #afafaf;background: #f0f0f0;font-size: 14px;color: #161616;    border-left: none;border-radius: 0 4px 4px 0;line-height: 34px;}    
+        .mainbox .chose .box .ul2{width: 44%;}    		
+        .mainbox .chose .box .fanwei .left{display: flex;justify-content: flex-end;margin-right: 5px;}    		
+        .mainbox .chose .box .fanwei .rig{display: flex;justify-content: flex-start;margin-left: 5px;}    		    		
+        .mainbox .chose .box .time{width: 25%;display: flex;line-height: 36px;font-size: 16px;justify-content: flex-end;}    		
+        .mainbox .chose .box .time div{width: 41%;border-radius: 4px;border: 1px solid #afafaf;display: flex;justify-content: flex-end;align-items: center;}    		
+        .mainbox .chose .box .time .left{margin-right: 5px;}    		
+        .mainbox .chose .box .time .rig{margin-left: 5px;}    		
+        .mainbox .chose .box .time input{font-size: 14px;width: 90%;height: 36px;line-height: 36px;margin-bottom: 0;color: #161616;border: none; padding: 0 10px;outline: none;transition: border .2s ease-in;}    		
+        .mainbox .chose .box .time .fa {width: 30px;padding-left: 10px;}    		
+        .mainbox .chose .box .time .fa-calendar:before {font-size: 17px;}	    		
+        .mainbox .chose .box .buttons{width: 43%;display: flex;align-content: center;}
+        .mainbox .chose .box .buttons button{background: transparent;background-color: #11a560;font-weight: 600;border-radius: 10px;width: 6rem;height: 36px;line-height: 36px;padding: 0;margin: 0; font-size: 16px;margin-left: 50px; }        
+        .mainbox .table{margin: 12px auto;width: 1200px;padding-top: 20px;}    		
+        .mainbox .table table{width: 100%;border: none;border-top: 1px solid #e5e5e5;}    		
+        .mainbox .table table tr{border-bottom: 1px solid #e5e5e5;}    		
+        .mainbox .table table th{text-align: center;font-size: 15px;font-weight: 700;border-bottom: 1px solid #e5e5e5;padding: 28px 0;}    		
+        .mainbox .table table td{text-align: center;border-bottom: 1px solid #e5e5e5;padding: 28px 0;}    		    		
+        .mainbox .table .jiedan{display: block;margin: 0 auto;border-radius: 5px;width: 76px;height: 28px;line-height: 28px;border: 1px solid #11a560!important;background-color: #11a560!important;color: #fff!important;font-size: 16px;font-weight: 600;}    		
+        .mainbox .table td.cdr{width: 23%;text-align: left;padding: 0 2%;line-height: 24px;}    		
+        .mainbox .table td.cdr .type{padding: 0;width: 24px;text-align: center;height: 24px;line-height: 24px;font-size: 14px;font-weight: 700;border-radius: 12px;cursor: default;display: inline-block;}    		
+   		    		
+        .mainbox .table td.cdr .num{float: right; display: inline-block;margin-left: 8px;background-color: #ffe9cc;color: #ff9800;height: 24px;line-height: 24px;font-size: 14px;font-weight: 700;text-align: left;border-radius: 12px;padding: 0 8px;}    		
+        .mainbox .table td.cdr .cdr1{width: 100%;display: flex;align-items: center;flex-wrap: wrap;}    		
+        .mainbox .table td.cdr p{width: 100%;float: left;display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden;margin-bottom: 0;    color: #222;font-size: 0.875rem;}    		    		.mainbox .table td.mf{position: relative;}    		
+        .mainbox .table td.mf img {display: block; position: absolute;top: 0;left: 0;width: 40%;}    		
+        .mainbox .table td img{display: none;}    		
+        .mainbox .table td.red{color: #e5342b;}    		    		
+        .mainbox .table td.bao{position: relative;}    		
+        .mainbox .table td.bao img{display: block; position: absolute;top: 27.1px;left: 24px;width: 18%;}
+        .tm-footer{
+            background:#f7f7f7;
+        }
+        .tm-footer, .tm-footer a{
+            color: #000 !important;
+        }   
+        .tm-footer h3 {
+            color: #000;
+            font-weight: 500;
+        } 	

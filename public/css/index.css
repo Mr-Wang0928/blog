@@ -1,0 +1,15 @@
+/*section区域开始*/
+	/*轮播图区域*/
+	.section .carousel{
+		width: 700px;
+		height: 450px;
+		
+		margin-bottom: 20px;
+	}
+	.section .carousel-inner img{
+		width: 700px;
+		}
+	.section .carousel-inner .carousel-caption{
+		left: 20px;
+	}	
+/*section区域结束*/

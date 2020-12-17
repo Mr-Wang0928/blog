@@ -1,0 +1,356 @@
+ul,li{
+	list-style: none;
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+
+
+/*nav区域开始*/
+	.navbar{
+		position: fixed;
+		left: 0px;
+		right: 0px;
+		margin:0px auto;
+	}
+	#nav .navbar-nav a:hover{
+		color: #ea6f5a;
+	}
+	#nav .navbar-header a:hover{
+		color: #ea6f5a;
+	}
+
+/*nav区域结束*/
+
+/*section区域开始*/
+	/*左边区域 */
+	.section h3{
+		margin-top: 0px;
+	}
+	.section{
+		padding-top: 70px;
+	}
+	.section .section-main{
+		width: 700px;
+		float: left;
+	} 
+	.section .article-list{
+		width: 700px;
+		border: 1px solid #ccc;
+		margin-bottom: 10px;
+	}
+	.section .article-list .article-title{
+		display: block;
+		height: 30px;
+		border-left:5px solid red;
+		padding: 6px;
+		color:#111;
+		font-weight:bold;
+	}
+	.section .article-list .article-intro{
+		padding: 10px;
+		color: #666;
+	}
+	.section .article-list .article-infor{
+		padding-left: 10px;
+		height:20PX;
+	}
+	.section .article-list .intro-text{
+		margin-right: 10px;
+	}
+	/*右边区域 */
+	.section .section-introduce{
+		width: 400px;
+		/*border: 1px solid #ccc;*/
+		float: right;
+		
+	}
+	.section .section-introduce .aside{
+		float: right;
+	}
+	.section .section-introduce .aside img{
+		width: 400px;
+		height: 215px;
+	}
+	.section .section-introduce .aside .aside-list{
+		padding-top: 20px;
+	}
+	.section .section-introduce .aside .list-item{
+		margin-bottom: 20px;
+		width: 400px;
+		height: 215px;
+	}
+
+	.section .section-introduce .introduce-title{
+		padding: 10px;
+		display: block;
+		background-color: #fff;
+	}
+	.section .section-introduce .introduce-img{
+		width: 80px;
+		height: 80px;
+		background: url('../images/section_introduce.jpg');
+		background-size: 80px 100px;
+		background-repeat:no-repeat;
+		border: 1px solid #000;
+		border-radius:50%;
+		margin: 10px;
+		float: left;
+	}
+	.section .section-introduce .introduce-text{
+		padding: 10px;
+		line-height: 200%;
+	}
+	.section .intro{
+		background-color: #ccc;
+	}
+	.section .click-rank{
+		width: 400px;
+		background-color: gray;
+	}
+	.section .rank-title{
+		display: block;
+		font-size:14px;
+		color: #333;
+		height: 40px;
+		line-height: 40px;
+		font-weight: bold;
+		background-color: #ccc;
+		box-sizing: border-box;
+		border-left: 5px solid red;
+		padding-left: 10px;
+	}
+	.section .rank-list{
+		padding-left: 10px;
+	}
+	.section .rank-list .list-item{
+		width: 400px;
+		height: 40px;
+		line-height: 40px;
+
+	}
+	
+
+
+/*section区域结束*/
+/*插件登陆注册区域开始*/
+	*,:after,:before{box-sizing:border-box}
+	.clearfix:after,.clearfix:before{content:'';display:table}
+	.clearfix:after{clear:both;display:block}
+	a{color:inherit;text-decoration:none;}
+	input, button {
+	  outline: none;
+	  border: none;
+	}
+	.login-html{
+		width:400px;
+		/*height:520px;*/
+		/*position:absolute;*/
+		/*padding:90px 70px 50px 70px;*/
+		background:rgba(40,57,101,.3);
+	}
+	.login-html .sign-in-htm,
+	.login-html .sign-up-htm{
+		top:0;
+		left:0;
+		right:0;
+		bottom:0;
+		position:absolute;
+		background:rgba(40,57,101,.8);
+		/*background-color: #ccc;*/
+		-webkit-transform:rotateY(180deg);
+		        transform:rotateY(180deg);
+		-webkit-backface-visibility:hidden;
+		        backface-visibility:hidden;
+		-webkit-transition:all .4s linear;
+		        transition:all .4s linear;
+	}
+	.login-html .sign-in-htm{
+		height: 345px;
+	}
+	.login-html .sign-up-htm{
+		height: 450px;
+	}
+	.login-html .sign-in,
+	.login-html .sign-up,
+	.login-form .group .check{
+		display:none;
+	}
+	.login-html .tab,
+	.login-form .group .label,
+	.login-form .group .button{
+		text-transform:uppercase;
+	}
+	.login-html .tab{
+		font-size:22px;
+		margin-right:15px;
+		padding-bottom:5px;
+		margin:0 15px 10px 0;
+		display:inline-block;
+		border-bottom:2px solid transparent;
+	}
+	.login-html .sign-in:checked + .tab,
+	.login-html .sign-up:checked + .tab{
+		color:#fff;
+		border-color:#1161ee;
+	}
+	.login-form{
+		min-height:345px;
+		position:relative;
+		-webkit-perspective:1000px;
+		        perspective:1000px;
+		-webkit-transform-style:preserve-3d;
+		        transform-style:preserve-3d;
+	}
+	.login-form .group{
+		margin-bottom:15px;
+	}
+	.login-form .group .label,
+	.login-form .group .input,
+	.login-form .group .button{
+		width:100%;
+		color:#fff;
+		display:block;
+	}
+	.login-form .group .input,
+	.login-form .group .button{
+		border:none;
+		padding:15px 20px;
+		border-radius:25px;
+		background:rgba(255,255,255,.1);
+	}
+	.login-form .group input[data-type="password"]{
+		text-security:circle;
+		-webkit-text-security:circle;
+	}
+	.login-form .group .label{
+		/*color:#aaa;*/
+		font-size:12px;
+	}
+	.login-form .group .button{
+		background:#1161ee;
+	}
+	.login-form .group label .icon{
+		width:15px;
+		height:15px;
+		border-radius:2px;
+		position:relative;
+		display:inline-block;
+		background:rgba(255,255,255,.1);
+	}
+	.login-form .group label .icon:before,
+	.login-form .group label .icon:after{
+		content:'';
+		width:10px;
+		height:2px;
+		background:#fff;
+		position:absolute;
+		-webkit-transition:all .2s ease-in-out 0s;
+		        transition:all .2s ease-in-out 0s;
+	}
+	.login-form .group label .icon:before{
+		left:3px;
+		width:5px;
+		bottom:6px;
+		-webkit-transform:scale(0) rotate(0);
+		    -ms-transform:scale(0) rotate(0);
+		        transform:scale(0) rotate(0);
+	}
+	.login-form .group label .icon:after{
+		top:6px;
+		right:0;
+		-webkit-transform:scale(0) rotate(0);
+		    -ms-transform:scale(0) rotate(0);
+		        transform:scale(0) rotate(0);
+	}
+	.login-form .group .check:checked + label{
+		color:#fff;
+	}
+	.login-form .group .check:checked + label .icon{
+		background:#1161ee;
+	}
+	.login-form .group .check:checked + label .icon:before{
+		-webkit-transform:scale(1) rotate(45deg);
+		    -ms-transform:scale(1) rotate(45deg);
+		        transform:scale(1) rotate(45deg);
+	}
+	.login-form .group .check:checked + label .icon:after{
+		-webkit-transform:scale(1) rotate(-45deg);
+		    -ms-transform:scale(1) rotate(-45deg);
+		        transform:scale(1) rotate(-45deg);
+	}
+	.login-html .sign-in:checked + .tab + .sign-up + .tab + .login-form .sign-in-htm{
+		-webkit-transform:rotate(0);
+		    -ms-transform:rotate(0);
+		        transform:rotate(0);
+	}
+	.login-html .sign-up:checked + .tab + .login-form .sign-up-htm{
+		-webkit-transform:rotate(0);
+		    -ms-transform:rotate(0);
+		        transform:rotate(0);
+	}
+
+	
+	.foot-lnk{
+		text-align:center;
+		height: 40px;
+		line-height: 40px;
+		
+	}
+	.section .err-container{
+		color: red;
+	}
+	.section .sign-in-htm .err-container{
+		margin-top: -10px;
+	}
+
+	.section .section-introduce .signed{
+		width: 400px;
+		height: 200px;
+		background-color: #eee;
+	}
+	.section .section-introduce .signed span,
+	.section .section-introduce .signed a{
+		display: block;
+		width: 400px;
+		height: 40px;
+		line-height: 40px;
+		text-decoration:none;
+		padding-left: 20px;
+	}
+	.section .section-introduce .signed a{
+		/*display: block;
+		padding-left: 20px;
+		width: 400px;
+		height: 40px;
+		line-height: 40px;*/
+		color: #23527c;
+	}
+/*插件登陆注册区域结束*/
+
+/*detail区域开始*/
+	#detail-article{
+		background-color: #f8f8f8;
+		min-height: 600px;
+	}
+	#detail-article .article-infor{
+		margin-top:10px;
+	}
+	#detail-article #article-intro{
+		width: 700px;
+		background-color: #ccc;
+		box-sizing: border-box;
+	}
+
+	#detail-article #article-intro .article-intro{
+		display: block;
+	}
+	#detail-article #article-content{
+		padding-left: 10px;
+	}
+	.section-main .comment{
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+/*detail区域结束*/

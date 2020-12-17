@@ -1,0 +1,12 @@
+/*category.html中添加按钮*/
+.mainbox .addbtn{
+	border-radius: 5%;
+	width: 100px;
+	float: right;
+	margin-right: 10px;
+	margin-bottom: 20px;
+}
+/*article-add.html中富文本最小高度*/
+.ck-rounded-corners{
+	min-height: 300px;
+}

@@ -1,0 +1,38 @@
+{% extends './layout.html' %}
+{% block title %}
+  博客管理-分类列表
+{% endblock %}
+{% block message %}
+  分类列表
+{% endblock %}
+{% block content %}
+<div class="mainbox">    
+	<a href="/category/add" class="btn btn-primary addbtn btn-lg" role="button">添 加</a>		   		
+    <div class="table">    			
+        <table border="0" cellspacing="0" id="test">					
+            <tr>            
+              <th>ID</th>           
+              <th>Name</th>           
+              <th>Order</th>                  
+            </tr>          
+               
+            	{% for user in users %}
+                <tr>                      
+                  <td class="mf">{{ user._id.toString() }}</td>                                  
+                  <td class="mf">{{ user.name }}</td> 
+                  <td class="mf">{{ user.order }}</td> 
+                  <td class="mf">
+                    <a href="/category/delete/{{ user._id.toString() }}" class="btn btn-primary delete" role="button" style="border-radius: 8%;float: right;margin-left: 5px"> 删 除 </a>
+                    <a href="/category/edit/{{ user._id.toString() }}" class="btn btn-primary " role="button" style="border-radius:8%;float: right;"> 编 辑 </a>
+                  </td>
+                </tr>
+              {% endfor %}
+               
+        </table>  
+      {% if pages>1 %}
+        {% include "./page-layout.html" %}
+      {% endif %}
+      
+    </div>    	
+</div>				
+{% endblock %}

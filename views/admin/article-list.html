@@ -1,0 +1,41 @@
+{% extends './layout.html' %}
+{% block title %}
+  博客管理系统
+{% endblock %}
+{% block message %}
+  用户列表
+{% endblock %}
+{% block content %}
+<div class="mainbox">    
+    <a href="/article/add" class="btn btn-primary addbtn btn-lg" role="button">添 加</a>     		   		
+    <div class="table">    			
+        <table border="0" cellspacing="0" id="test">					
+            <tr>	
+                <th>标题</th>                    
+            	<th>分类</th>					  
+                <th>作者</th>					  
+                <th>创建时间</th>                             
+                <th>点击量</th>                             
+            </tr>          
+                {% for article in articles %}
+                	<tr>                      
+                        <td class="mf">{{ article.title }}</td>                                  
+                        <td class="mf">{{ article.category.name }}</td>                                  
+                        <td class="mf">{{ article.user.username }}</td>                                  
+                        <td class="mf">{{ article.createdTime }}</td>                                  
+                       <!--  <td class="mf">{{ article.createdAt | date('Y年m月d日 H:m:i',-8*60) }}</td>   -->                                
+	                    <td class="mf">{{ article.click }}</td> 
+                        <td class="mf">
+                            <a href="/article/delete/{{ article._id.toString() }}" class="btn btn-primary delete" role="button" style="border-radius: 8%;float: right;margin-left: 5px"> 删 除 </a>
+                            <a href="/article/edit/{{ article._id.toString() }}" class="btn btn-primary " role="button" style="border-radius:8%;float: right;margin-left: 5px""> 编 辑 </a>
+                             <a href="/article/edit/{{ article._id.toString() }}" class="btn btn-primary " role="button" style="border-radius:8%;float: right;"> 详 情 </a>
+                        </td>                                 
+                	</tr>
+                {% endfor %}
+        </table>  
+		
+		{% include "./page-layout.html" %}
+		
+    </div>    	
+</div>				
+{% endblock %}
